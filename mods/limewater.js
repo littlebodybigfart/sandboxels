@@ -11,9 +11,8 @@ elements.limewater = {
   burnInto: ["steam, slaked_lime"],
   tempLow: 0,
   reactions: {"carbon_dioxide": {elem1: "calcium_carbonate_solution", elem2: "" },
-},
-  };
-  
+             },
+};
 elements.calcium_carbonate_solution = {
   color: ["#ffffff"],
   behavior: behaviors.LIQUID,
@@ -23,7 +22,6 @@ elements.calcium_carbonate_solution = {
   burn: 100,
   burnInto: ["steam, calcium_carbonate"],
 };
-
 elements.calcium_carbonate = {
   color: ["#ffffff, #e3e3e3"],
   behavior: behaviors.LIQUID,
