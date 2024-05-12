@@ -11,7 +11,7 @@ elements.limewater = {
   burnInto: ["steam, slaked_lime"],
   tempLow: 0,
   reactions: {"carbon_dioxide": {elem1: "calcium_carbonate_solution", elem2: "" },
-};
+},
   };
   
 elements.calcium_carbonate_solution = {
