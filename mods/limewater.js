@@ -49,4 +49,4 @@ elements.molten_calcium_carbonate = {
 }
 
 if (!elements.water.reactions) { elements.water.reactions = {} }
-elements.water.reactions.slaked_lime = { "elem1": "null" "elem2": "limewater" };
+elements.water.reactions.slaked_lime = { elem1: "null", elem2: "limewater" };
