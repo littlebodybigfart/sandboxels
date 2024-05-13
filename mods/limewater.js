@@ -4,7 +4,7 @@
 // and a thank you to r74n for being slay and making this game <3
 
 if (!elements.slaked_lime.reactions) { elements.slaked_lime.reactions = {} }
-elements.slaked_lime.reactions.water = { "elem1": "limewater", chance: 0.4 };
+elements.slaked_lime.reactions.water = { "elem1": "limewater" "elem2": "limewater" };
 
 elements.limewater = {
   color: ["#3baaff"],
