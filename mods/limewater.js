@@ -1,9 +1,10 @@
 // first time making a mod lowkey nervous dk why
 // **don't expect a single line of this to work. seriously.**
-// and a thank you to the discord for actually trying to help this monstrosity run properly
+// and a thank you to the sandboxels discord for actually trying to help this monstrosity run properly,
+// and a thank you to r74n for being slay and making this game <3
 
-if (!elements.bone.reactions) { elements.bone.reactions = {} }
-elements.slaked_lime.reactions.water = { "elem1": "limewater", chance:0.4 };
+if (!elements.slaked_lime.reactions) { elements.slaked_lime.reactions = {} }
+elements.slaked_lime.reactions.water = { "elem1": "limewater", chance: 0.4 };
 
 elements.limewater = {
   color: ["#3baaff"],
@@ -34,6 +35,8 @@ elements.calcium_carbonate = {
   density: 2710,
   burn: 825,
   burnInto: ["molten_calcium_carbonate"],
+  reactions: {"water": {elem1: "calcium_carbonate_solution", elem2:"calcium_carbonate_solution"}
+                       },
 }
 
 elements.molten_calcium_carbonate = {
