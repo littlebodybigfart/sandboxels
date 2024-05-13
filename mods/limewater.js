@@ -3,8 +3,8 @@
 // and a thank you to the sandboxels discord for actually trying to help this monstrosity run properly,
 // and a thank you to r74n for being slay and making this game <3
 
-if (!elements.water.reactions) { elements.water.reactions = {} }
-elements.water.reactions.slaked_lime = { "elem1": "null" "elem2": "limewater" };
+//if (!elements.water.reactions) { elements.water.reactions = {} }
+//elements.water.reactions.slaked_lime = { "elem1": "null" "elem2": "limewater" };
 
 elements.limewater = {
   color: ["#3baaff"],
