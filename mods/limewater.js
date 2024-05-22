@@ -2,36 +2,36 @@
 
 
 elements.limewater = {
-  color: ["#3baaff"],
+  color: "#3baaff",
   behavior: behaviors.LIQUID,
   category: "liquids",
   state: "liquid",
   density: 2211,
   tempHigh: 100,
-  stateHigh: ["steam, slaked_lime"],
+  stateHigh: ["steam", "slaked_lime"],
   tempLow: 0,
   stateLow: "limewater_ice",
   reactions: {"carbon_dioxide": {elem1: "calcium_carbonate_solution", elem2: null },
              },
 };
 elements.limewater_ice = {
-  color: ["#def0ff"],
+  color: "#def0ff",
   behavior: behaviors.WALL,
   category: "solids",
   state: "solid",
   density: 2211,
   temp: -5,
   tempHigh: 2,
-  stateHigh: ["limewater"],
+  stateHigh: "limewater",
 };
 elements.calcium_carbonate_solution = {
-  color: ["#ffffff"],
+  color: "#ffffff",
   behavior: behaviors.LIQUID,
   category: "liquids",
   state: "liquid",
   density: 2710,
   tempHigh: 100,
-  stateHigh: ["steam, calcium_carbonate"],
+  stateHigh: ["steam", "calcium_carbonate"],
 };
 
 elements.calcium_carbonate = {
@@ -42,7 +42,7 @@ elements.calcium_carbonate = {
   density: 2710,
   temp: 20,
   tempHigh: 825,
-  stateHigh: ["molten_calcium_carbonate"],
+  stateHigh: "molten_calcium_carbonate",
   reactions: {"water": {elem1: "calcium_carbonate_solution", elem2:"calcium_carbonate_solution", temp1: 50, temp2: 50 },
                        },
 };
