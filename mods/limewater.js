@@ -1,7 +1,4 @@
-// first time making a mod lowkey nervous dk why
-// **don't expect a single line of this to work. seriously.**
-// and a thank you to the sandboxels discord for actually trying to help this monstrosity run properly,
-// and a thank you to r74n for being slay and making this game <3
+// first time making a mod so bare with me
 
 
 elements.limewater = {
@@ -10,43 +7,58 @@ elements.limewater = {
   category: "liquids",
   state: "liquid",
   density: 2211,
-  burn: 100,
-  burnInto: ["steam, slaked_lime"],
+  tempHigh: 100,
+  stateHigh: ["steam, slaked_lime"],
   tempLow: 0,
-  reactions: {"carbon_dioxide": {elem1: "calcium_carbonate_solution", elem2: "null" },
+  stateLow: "limewater_ice",
+  reactions: {"carbon_dioxide": {elem1: "calcium_carbonate_solution", elem2: null },
              },
-}
+};
+elements.limewater_ice = {
+  color: ["#def0ff"],
+  behavior: behaviors.WALL,
+  category: "solids",
+  state: "solid",
+  density: 2211,
+  temp: -5,
+  tempHigh: 2,
+  stateHigh: ["limewater"],
+};
 elements.calcium_carbonate_solution = {
   color: ["#ffffff"],
   behavior: behaviors.LIQUID,
   category: "liquids",
   state: "liquid",
   density: 2710,
-  burn: 100,
-  burnInto: ["steam, calcium_carbonate"],
-}
+  tempHigh: 100,
+  stateHigh: ["steam, calcium_carbonate"],
+};
+
 elements.calcium_carbonate = {
   color: ["#ffffff, #e3e3e3"],
   behavior: behaviors.POWDER,
   category: "liquids",
   state: "liquid",
   density: 2710,
-  burn: 825,
-  burnInto: ["molten_calcium_carbonate"],
-  reactions: {"water": {elem1: "calcium_carbonate_solution", elem2:"calcium_carbonate_solution"}
+  temp: 20,
+  tempHigh: 825,
+  stateHigh: ["molten_calcium_carbonate"],
+  reactions: {"water": {elem1: "calcium_carbonate_solution", elem2:"calcium_carbonate_solution", temp1: 50, temp2: 50 },
                        },
-}
+};
 
 elements.molten_calcium_carbonate = {
     color: ["#f5190a", "#d4180b", "#f5190a", "#423f3e"],
-    behavior: behaviors.POWDER,
-    category: "powders",
+    behavior: behaviors.LIQUID,
+    category: "states",
     state: "solid",
     density: 2710,
     temp: 900,
     tempLow: 820,
+    viscosity: 100,
     stateLow: "calcium_carbonate",
-}
+};
 
 if (!elements.water.reactions) { elements.water.reactions = {} }
-elements.water.reactions.slaked_lime = { elem1: "null", elem2: "limewater" };
+if (!elements.slaked_lime.reactions) { elements.slaked_lime.reactions = {} }
+elements.water.reactions.slaked_lime = { "elem1":"limewater", "elem2": "limewater"};
