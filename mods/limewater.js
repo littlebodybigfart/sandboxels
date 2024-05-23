@@ -35,7 +35,7 @@ elements.calcium_carbonate_solution = {
 };
 
 elements.calcium_carbonate = {
-  color: ["#ffffff, #e3e3e3"],
+  color: ["#ffffff", "#e3e3e3"],
   behavior: behaviors.POWDER,
   category: "liquids",
   state: "liquid",
@@ -43,7 +43,7 @@ elements.calcium_carbonate = {
   temp: 20,
   tempHigh: 825,
   stateHigh: "molten_calcium_carbonate",
-  reactions: {"water": {elem1: "calcium_carbonate_solution", elem2:"calcium_carbonate_solution", temp1: 50, temp2: 50 },
+  reactions: {"water": {elem1: "calcium_carbonate_solution", elem2:"calcium_carbonate_solution", temp1: 60, temp2: 60 },
                        },
 };
 
@@ -60,5 +60,4 @@ elements.molten_calcium_carbonate = {
 };
 
 if (!elements.water.reactions) { elements.water.reactions = {} }
-if (!elements.slaked_lime.reactions) { elements.slaked_lime.reactions = {} }
 elements.water.reactions.slaked_lime = { "elem1":"limewater", "elem2": "limewater"};
